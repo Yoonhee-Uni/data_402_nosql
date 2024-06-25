@@ -18,13 +18,13 @@ Scalable and flexible
 SQL databases use SQL (Structured Query Language). NoSQL databases use JSON (JavaScript Object Notation), XML, YAML, or binary schema, facilitating unstructured data.
 
 ### **Example NoSQL Schema design**
-![img.png](img.png)
+![img.png](/github/data_402_nosql/image%20folder/img.png)
 
 #### Design Explanation:
 The address has been moved as an array is flexible enough to accommodate additional entries in the future.
 Each item in the address array has a limited number of fields, no need to create a separate collection.
 
-![img_1.png](img_1.png)
+![img_1.png](/github/data_402_nosql/image%20folder/img_1.png)
 
 #### Design Explanation:
 1-M relationships are advised to handle in a single model where data size does not increase drastically. Therefore region, country, and state are handled in a single document which is kind of a defined set of data.
@@ -36,7 +36,7 @@ Schema - A vs B — Better Query Performance:
 The city collection provides wider range of options to query data from region collection efficiently and faster, based on “region_id”, “country_id” and “state_id”.
 Cities can be grouped easily based on “region_id”, “country_id” or “state_id” more efficiently.
 
-![img_2.png](img_2.png)
+![img_2.png](/github/data_402_nosql/image%20folder/img_2.png)
 #### Design Explanation:
 This schema has less nested objects therefor more clarity
 It is much easier for applications such as NodeJS apps to handle queries based on predefined schemas.
@@ -51,25 +51,25 @@ NoSQL databases come in several types, each designed to handle specific data sto
 Description: Store and manage data as documents, typically in JSON, BSON, or XML format. They are suitable for semi-structured data and provide flexibility in data modelling.
 Examples: MongoDB, CouchDB, RavenDB.
 
-![img_4.png](img_4.png)
+![img_4.png](/github/data_402_nosql/image%20folder/img_4.png)
 2. ```Key-Value Stores```
 Description: Store data as key-value pairs, where each key is unique and maps to a value. They are highly performant for simple get and put operations.
 Examples: Redis, Amazon DynamoDB, Riak, Aerospike
 
-![img_3.png](img_3.png)
+![img_3.png](/github/data_402_nosql/image%20folder/img_3.png)
 3. ```Column-Family Stores (Wide-Column Stores)```
 Description: Store data in columns rather than rows, allowing for efficient storage and retrieval of large datasets. They are ideal for analytical applications.
 Examples: Apache Cassandra, HBase, ScyllaDB, Google Bigtable
 
- ![img_5.png](img_5.png)
+ ![img_5.png](/github/data_402_nosql/image%20folder/img_5.png)
 4. ```Graph Databases```
 Description: Designed to store and navigate relationships between data points, represented as nodes and edges. They are excellent for use cases involving complex relationships.
 Examples: Neo4j, Amazon Neptune, ArangoDB, OrientDB
-![img_7.png](img_7.png)
+![img_7.png](/github/data_402_nosql/image%20folder/img_7.png)
 5. ```Time-Series Databases```
 Description: Optimised for storing and querying time-stamped or time-series data, making them suitable for applications like IoT, monitoring, and analytics.
 Examples: InfluxDB, TimescaleDB, OpenTSDB, Prometheus
-![img_8.png](img_8.png)
+![img_8.png](/github/data_402_nosql/image%20folder/img_8.png)
 
 # MongoDB
 
@@ -99,7 +99,7 @@ db.collection.createIndex(keys, options, commitQuorum)
 
 #### What are Documents?
 MongoDB stores data records as BSON documents. BSON is a binary representation of JSON documents, though it contains more data types than JSON. For the BSON spec, see bsonspec.org. See also BSON Types.
-![img_9.png](img_9.png)
+![img_9.png](/github/data_402_nosql/image%20folder/img_9.png)
 
 ##### Definition of Documents:
 `JSON Format`: MongoDB documents are stored in a JSON-like format, specifically BSON (Binary JSON). JSON is a text-based format that is easy for humans to read and write and easy for machines to parse and generate.
@@ -196,4 +196,5 @@ Memory Mapped Storage: MongoDB uses memory-mapped files for data storage, which 
 What scenarios is MongoDB good for?
 What scenarios is it not good for?
  
+
 

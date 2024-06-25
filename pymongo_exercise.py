@@ -21,6 +21,7 @@ def find_yellow_eyes():
     db = connect_server()
     for document in db.characters.find({"eye_color": "yellow"}, {"_id": 0, "name": 1, "eye_color": 1}):
         print(document)
+        print(document["name"]) ## Luke way
 
 #Exercise 3 - Find male characters. Limit your results to only show the first 3.
 def find_male():

@@ -91,7 +91,7 @@ Install mongotools. Add the path to it's bin folder to the PATH variable (will b
 ```commandline
 sudo dpkg -l mongodb-database-tools
 ```
-![img_11.png](img_11.png)
+![img_11.png](image folder/img_11.png)
 
 Exercise 4
 
@@ -430,3 +430,25 @@ db.characters.aggregate([
 ])
 
 ```
+Exercise 2
+
+Some aggregation doesn't require the .aggregate() method
+
+`Use .distinct()` to find a list of all species names in the database
+
+```commandline
+>>> db.characters.distinct("species.name")
+```
+Use .count() or .countDocuments() to get a count of the amount of humans in the database
+```
+>>> db.characters.countDocuments({ "species.name": "Human" })
+
+```
+What does .estimatedDocumentCount({}) do?
+```commandline
+Returns the count of all documents in a collection or view.
+
+db.collection.estimatedDocumentCount( <options> )
+
+```
+
